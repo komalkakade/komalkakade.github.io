@@ -1,0 +1,157 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #121212, #303030);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    padding: 80px 0;
+    background-image: url("https://subtlepatterns.com/patterns/purty.png");
+    background-blend-mode: overlay;
+    opacity: 0.1;
+  }
+  
+  .profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    animation: glitch 5s infinite;
+  }
+  
+  @keyframes glitch {
+    0% {
+      filter: hue-rotate(0deg) grayscale(0%);
+    }
+    25% {
+      filter: hue-rotate(30deg) grayscale(100%);
+    }
+    50% {
+      filter: hue-rotate(0deg) grayscale(0%);
+    }
+    75% {
+      filter: hue-rotate(-30deg) grayscale(100%);
+    }
+    100% {
+      filter: hue-rotate(0deg) grayscale(0%);
+    }
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin: 20px;
+  }
+  
+  .tagline {
+    font-size: 1.5em;
+    margin: 0;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav li a:hover {
+    border-bottom-color: #F0F8FF;
+    box-shadow: 0 0 5px #F0F8FF;
+    transform: scale(1.1);
+    animation: pulsate 0.5s ease-in-out;
+  }
+  
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .grid img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .grid img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .grid img:hover::after {
+    opacity: 1;
+  }
+  
+  .grid img::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+  .grid img:hover::after {
+    content: attr(alt) "Learn More";
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills h3 {
+    margin-bottom: 10px;
+  }
+  
+  .skills ul li {
+    margin-bottom: 5px;
+  }
+  
+  .skills .progress {
+    background-color: #ddd;
+    height: 10px;
+  
